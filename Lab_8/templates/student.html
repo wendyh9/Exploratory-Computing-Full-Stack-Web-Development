@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Enrollment</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src ="/static/myscript.js"></script>
+</head>
+
+
+<body>
+
+<div class="box centered">
+
+    <div id="top">
+        <h2 class="no-bold" id="welcome-message">Welcome <span id="user_name">{{Name}}</span>!</h2>
+    </div>
+
+    <h1 class="uni-name">ACME University</h1>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'your_courses')" id="default">Your Courses</button>
+        <button class="tablinks" onclick="openTab(event, 'add_courses')">Add Courses</button>
+    </div>
+
+
+    <div id="your_courses" class="tabcontent">
+        <br>
+        <table>
+            <tr>
+                <th>Class Name</th>
+                <th>Teacher</th>
+                <th>Enrolled Students</th>
+                <th>Drop</th>
+            </tr>
+            {% for class in enrolled_classes %}
+            <tr>
+                <td>{{class.Name}}</td>
+                <td>{{class.teacher_name}}</td>
+                <td>{{class.enrollment|length}}/{{class.capacity}}</td>
+                <td><button onclick="drop('{{class.Name}}', '{{Name}}')">Drop</button></td>          
+            </tr>
+            {%endfor%}
+        </table>
+        
+        <button onclick="location.href='index.html'">Sign Out</button>
+    </div>
+
+    <div id="add_courses" class="tabcontent">
+        <br>
+        <table>
+            <tr>
+                <th>Class Name</th>
+                <th>Teacher</th>
+                <th>Enrolled Students</th>
+                <th>Enroll</th>
+            </tr>
+            {%for class in available_classes %}
+            <tr>
+                <td>{{class.Name}}</td>
+                <td>{{class.teacher_name}}</td>
+                <td>{{class.enrollment|length}}/{{class.capacity}}</td>
+                <td><button onclick="enroll('{{class.Name}}','{{Name}}')">Enroll</button></td>   
+            </tr>
+            {% endfor %}
+        </table>
+        <button onclick="location.href='index.html'">Sign Out</button>
+    </div>
+</body>
+</html>

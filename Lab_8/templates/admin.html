@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grader</title>
+
+</head>
+<body>
+<link rel="stylesheet" href="static/style.css" />
+<script src ="static/script.js"></script>
+
+<div class="box2">
+
+    <h2>Student options</h2>
+    <!--<div class = "container">
+    <label for="name">Full Name of Student:</label><br> Obtain enrollments and grades of students by entering name
+    <input type="text" id="name" name="name" /><br />
+    <button type="button" id="Grade" onclick="showStudentData()">Show Enrollments and Grades</button>
+    <div id="showgr"></div>
+    </div> -->
+
+
+
+
+
+    <div>
+      <label for="student_username"> Username (for new student):</label><br><br> <!--For entering a new student's login info-->
+      <input type="text" class="tbox2" id="student_username" name="student_username" /><br><br>
+      <label for="student_password">Password (for new student):</label><br><br>
+      <input type="text" class="tbox2" id="student_password" name="student_password" /><br><br>
+      <label for="student_name"> Name (for new student):</label><br><br>
+      <input type="text" class="tbox2" id="student_name" name="student_name" /><br><br>
+        <input type="submit" class="subbox2" onclick="newStudent()" value="Post">
+      <div id="showStudentLogin"></div>
+    </div>
+
+
+
+
+
+
+    <p> <br></p>
+    <div>
+      <label for="snam"> Name of Student (for Grade Change):</label><br><br> <!-- for changing grade of student in a class-->
+      <input type="text" class="tbox2" id="snam" name="snam" /><br><br>
+      <label for="cgradename"> Name of Class:</label><br><br>
+      <input type="text" class="tbox2" id="cgradename" name="cgradename" /><br><br>
+      <label for="newgrae"> Grade:</label><br><br>
+      <input type="text" class="tbox2" id="newgrae" name="newgrae" /><br><br>
+      <input type="submit" class="subbox2" onclick="changeGrad()" value="Change">
+      <div id="newGrad"></div>
+    </div>
+
+
+    <p> <br></p>
+    <div>
+      <label for="nom"> Name of Student (for deletion):</label><br><br> <!-- for deleting a student-->
+      <input type="text" class="tbox2" id="nom" name="nom" /><br><br>
+      <input type="submit" class="subbox2" onclick="delete_student()" value="Delete">
+      <div id="deletedP"></div>
+    </div>
+
+
+    <p> <br></p>
+    <h2>Teacher Options</h2>
+    <div>
+      <label for="teacher_username"> Username (for new teacher):</label><br><br> <!--For entering a new teacher's login ingo-->
+      <input type="text" class="tbox2" id="teacher_username" name="teacher_username" /><br><br>
+      <label for="teacher_password">Password (for new teacher):</label><br><br>
+      <input type="text" class="tbox2" id="teacher_password" name="teacher_password" /><br><br>
+      <label for="new_teacher_name"> Name (for new Teacher):</label><br><br>
+      <input type="text" class="tbox2" id="new_teacher_name" name="new_teacher_name" /><br><br>
+      <input type="submit" class="subbox2" onclick="newTeachLogin()" value="Post">
+      <div id="showTeacherLogin"></div>
+    </div>
+
+
+
+
+
+    <p> <br></p>
+    <div>
+      <label for="dname"> Name of Teach (for deletion):</label><br><br> <!--hey teach, you're fired-->
+      <input type="text" class="tbox2" id="dname" name="dname" /><br><br>
+      <input type="submit" class="subbox2" onclick="delete_teacher()" value="Delete">
+      <div id="deletedT"></div>
+    </div>
+
+
+
+    <p> <br></p>
+    <div>
+      <label for="ctnom"> Name of class (for teacher change):</label><br><br> <!-- for changing teacher of a class-->
+      <input type="text" class="tbox2" id="ctnom" name="ctnom" /><br><br>
+      <label for="teach"> New Teacher of Class:</label><br><br>
+      <input type="text" class="tbox2" id="teach" name="teach" /><br><br>
+      <input type="submit" class="subbox2" onclick="changeTeach()" value="Delete">
+<!--       <div id="newTeach"></div> -->
+    </div>
+
+
+
+    <!--
+    <p><br></p>
+    <div class = "container">
+    <label for="tnam">Full Name of Teacher:</label><br>   # to show a teacher's assigned classes
+    <input type="text" id="tnam" name="tname" /><br />
+    <button type="button" id="tclass" onclick="showTClass()">Show Classes Taught by Teacher</button>
+    <div id="showtclas"></div>
+    </div>  -->
+
+    <p><br></p>
+    <h2>Class Options</h2>
+
+    <div>
+      <label for="class_name"> Name (for new class):</label><br><br> <!-- for adding a new class with time and teacher-->
+      <input type="text" class="tbox2" id="class_name" name="class_name" /><br><br>
+      <label for="class_teacher"> Name of Assigned Teacher:</label><br><br>
+      <input type="text" class="tbox2" id="class_teacher" name="class_teacher" /><br><br>
+      <input type="submit" class="subbox2" onclick="newClass()" value="Post">
+      <div id="showClass"></div>
+    </div>
+
+
+    <!--<p> <br></p>
+    <div class = "container">
+    <label for="nCnam"> Class Name (for time Change):</label><br>    for changing time of a class
+    <input type="text" id="nCnam" name="nCnam" /><br>
+    <label for="ntime"> New Time:</label><br>
+    <input type="text" id="ntime" name="ntime" /><br>
+    <button  onclick="changeTime()">Change</button>
+    <div id="newTime"></div>
+    </div> -->
+
+    <p><br></p>
+    <div>
+      <label for="cnaam"> Class Name (for adding new Student):</label><br><br>
+      <input type="text" class="tbox2" id="cnaam" name="cnaam" /><br><br>
+      <label for="nsname"> Name of Student to be Added:</label><br><br>
+      <input type="text" class="tbox2" id="nsname" name="nsname" /><br><br>
+      <input type="submit" class="subbox2" onclick="addStudentClass()" value="Add">
+    </div>
+
+    <p> <br></p>
+    <div>
+      <label for="dnom"> Name of class (for deletion):</label><br><br> <!-- for deleting a class-->
+      <input type="text" class="tbox2" id="dnom" name="dnom" /><br><br>
+      <input type="submit" class="subbox2" onclick="delete_class()" value="Delete">
+      <div id="deletedC"></div>
+    </div>
+
+
+
+    <p> <br></p>
+    <h2>Admin Options</h2>
+    <div>
+      <label for="admin_username"> Username (for new admin):</label><br><br> <!--For entering a new admin's login ingo-->
+      <input type="text" class="tbox2" id="admin_username" name="admin_username" /><br><br>
+      <label for="admin_password">Password (for new admin):</label><br><br>
+      <input type="text" class="tbox2" id="admin_password" name="admin_password" /> <br><br>
+      <input type="submit" class="subbox2" onclick="newAdmin()" value="Post">
+      <div id="showAdminLogin"></div>
+    </div>
+</div>
+</body>
+</html>

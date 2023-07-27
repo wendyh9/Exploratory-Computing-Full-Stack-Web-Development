@@ -1,0 +1,91 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text-center {
+    text-align: center;
+}
+.page-title {
+    font-size: 60px;
+}
+.nav-link {
+    font-size: 1.5em;
+    margin-left: 50px;
+}
+.index-page {
+    background-color: #FBE8A6;
+}
+div.jumbotron {
+    background-color: #b0e6ed;
+    margin-bottom: 0px;
+}
+li a {
+    display: block;
+    text-align: center;
+}
+li a:hover {
+    background-color: #b2f8fb;
+}
+.food-title, .about-title {
+    padding-top: 50px;
+    font-size: 50px;
+}
+.food-description {
+    padding-top: 300px;
+    padding-left: 40px;
+    font-size: 25px;
+}
+.image-and-text {
+    margin-bottom: 30px;
+    display: flex;
+    padding: 50px;
+    padding-top: 25px;
+}
+img {
+    border-radius: 25px;
+}
+table {
+    margin-left: 425px;
+    margin-bottom: 50px;
+    width: 50%;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid grey;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px; 
+}
+.recipe-steps {
+    width: 50%;
+    font-size: 20px;
+    padding-right: 70px;
+}
+.text-and-video {
+    display: flex;
+    padding-left: 60px;
+    padding-bottom: 40px;
+}
+.heading {
+    margin-bottom: 25px;
+}
+.video-text {
+    font-size: 20px;
+}
+li {
+    padding-bottom: 10px;
+}
+.area-description {
+    font-size: 25px;
+    padding-top: 140px;
+    padding-left: 70px;
+}
+.ethnic-description {
+    font-size: 25px;
+    padding-right: 50px;
+    padding-top: 25px;
+}
+@media screen and (max-width: 1475px) {
+    .food-description {
+       padding-top: 0px; 
+    }
+}

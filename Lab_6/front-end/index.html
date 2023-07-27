@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <title>Student Grades</title>
+    </head>
+    
+    <body>
+        <h1 class="text-center">
+            Student Grades
+        </h1>
+        <div class="content">
+        <!-- 	Allow a user to ask for a grade from the backend and display the grade, given the student name -->
+            <h2>Display Student Grade:</h2>
+            <p id="display-student-grade"></p>
+            <form>
+                <label for="full-name">Enter full name: </label>
+                <br>
+                <input type="text" id="full-name">
+                <button type="button" onclick="display_student_grade()">Display</button>
+            </form>
+
+            <br>
+
+        <!-- 	Allow a user to create a new student name and grade in the backend -->
+            <h2>Create a new entry: </h2>
+            <p id="create-new-entry"></p>
+            <form>
+                <label for="full_name">Enter full name: </label> 
+                <br>
+                <input type="text" id="full_name">
+                <br>
+                <br>
+                <label for="grade">Enter grade: </label>
+                <br> 
+                <input type="text" id="grade">
+                <button type="button" onclick="create_new_entry()">Add</button>
+            </form>
+
+            <br>
+
+        <!-- 	Allow a user to edit a grade in the backend -->
+            <h2>Edit an existing grade: </h2>
+            <p id="edit-existing-grade"></p>
+            <form>
+                <label for="full_n">Enter full name: </label> 
+                <br>
+                <input type="text" id="full_n">
+                <br>
+                <br>
+                <label for="new_grade">Enter new grade: </label> 
+                <br>
+                <input type="text" id="new_grade">
+                <button type="button" onclick="edit_existing_grade()">Update</button>
+            </form>
+
+            <br>
+
+        <!-- 	Allow a user to delete a grade in the backend -->
+            <h2>Delete an entry: </h2>
+            <p id="deleted-entry"></p>
+            <form>
+                <label for="full_na">Enter full name: </label> 
+                <br>
+                <input type="text" id="full_na">
+                <button type="button" onclick="delete_entry()">Remove</button>
+            </form>
+    
+            <!-- 	Allow the user to see all students and grades -->
+            <h2>View all students and their grades: </h2>
+            <button type="button" onclick="all_grades()">Display</button>
+            <p id="all-grades"></p>
+        </div>
+    </body>
+</html>

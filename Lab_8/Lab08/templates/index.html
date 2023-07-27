@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="box centered">
+      <form method="POST" action="{{ url_for('login') }}">
+        {% if error %}
+        <p>Either incorrect username or password! Please try again!</p>
+        {% endif %}
+        <h1>ACME University</h1>
+        <form class="centered">
+  
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" /><br>
+          <p></p>
+  
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password"><br>
+          <p></p>
+  
+          <input type="submit" value="Sign in">
+        </form>
+      </form> 
+    </div>
+  </body>
+</html>
+
+

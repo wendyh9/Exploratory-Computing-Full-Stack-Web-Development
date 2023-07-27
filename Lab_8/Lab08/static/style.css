@@ -1,0 +1,220 @@
+body {
+  text-align: center;
+}
+
+.box {
+  width: 1400px;
+  height: 600px;
+  margin: auto;
+  padding: 25px;
+  border: 3px solid #151A7B;
+  background: lightblue;
+}
+
+.box2 {
+  width: 1400px;
+  height: 4035px;
+  margin: auto;
+  padding: 25px;
+  border: 3px solid #151A7B;
+  background: lightblue;
+}
+
+.resizedTextbox {
+  width: 50%;
+}
+
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1, h2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+form {
+  display: inline-block;
+}
+
+button {
+  background-color: #151A7B;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 120px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+input.tbox1 {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input.tbox2 {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input.subbox1 {
+  width: 100%;
+  background-color: #151A7B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+input.subbox2 {
+  width: 25%;
+  background-color: #151A7B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+input.subbox3 {
+  width: 50%;
+  background-color: #151A7B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
+
+input[type="submit"]:hover {
+  background-color: #0e1256;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.no-bold {
+  font-weight: normal;
+}
+
+#top {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Wendy's additional css for  professor.html*/
+.uni-name {
+  margin-top: -50px;
+  padding-bottom: 30px;
+}
+
+table.table1 {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.table2 {
+  margin: 0 auto;
+  width: 85%;
+}
+
+
+table, th, td {
+  border: 1px solid lightblue;
+}
+
+th {
+  background-color: #151A7B;
+  color: white;
+  font-size: x-large;
+}
+
+td {
+  font-size: larger;
+}
+
+th, td {
+  height: 60px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+disabled{
+  background-color: gray
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #151A7B;
+  width: 93%;
+  margin: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: white;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #0e1256;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #250E62;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid lightblue;
+  border-top: none;
+}

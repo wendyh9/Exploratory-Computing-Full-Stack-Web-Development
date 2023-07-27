@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+        <!---<script src="script.js" defer></script>--->
+        <title>Professor View</title>
+    </head>
+    <body>
+        <div class="box centered">
+            <div id="top">
+                <h2 class="no-bold" id="welcome-message">Welcome <span id="user_name">{{Name}}</span>!</h2>
+            </div>
+            <h1 class="uni-name">ACME University</h1> 
+            <h2>Your Courses</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Teacher</th>
+                        <th>Students Enrolled</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for class_list in taught_classes %}
+                    <tr>
+                        <td><a href="{{ url_for('enrolled_students', class_id=class_list.id) }}">{{ class_list.Name }}</a></td>
+                        <td>{{ class_list.teacher_name }}</td>
+                        <td>{{ class_list.enrollment|length }} / {{ class_list.capacity }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button onclick="location.href='index.html'">Sign Out</button>
+        </div>
+
+    </body>
+</html>

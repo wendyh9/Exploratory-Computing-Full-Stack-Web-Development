@@ -1,0 +1,48 @@
+<!-- Updated by Richard on April 11: 2:32AM -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class Enrollment</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src ="/static/myscript.js"></script>
+</head>
+
+<body>
+<div class="box centered">
+  <div>
+    <div id="top">
+      <h2 class="no-bold" id="enrolled_message">Here's what you're teaching, <span id="user_name">{{ Name}}!</span>!</h2>
+    </div>
+    <h1 class="uni-name">ACME University</h1>
+
+    <div class="top">
+      <a id="back_btn" href="teacher.html">Back</a>
+    </div>
+
+    <h2 id="current_class">{{ current_class }}</h2>
+
+    <table class="table2">
+      <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Grade</th>
+        <th>Enter New Grade</th>
+        <th>Update</th>
+      </tr>
+      </thead>
+      <tbody>
+            {% for student, grade in student_grade_pairs %}
+      <tr>
+        <td>{{ student.Name }}</td>
+        <td>{{ grade }}</td>
+        <td><input type="number" step="0.01" id="grade_{{ student.Name }}"></td>
+        <td><button class="c_grade" onclick="update('{{class_name}}', '{{student.Name}}', 'grade_{{ student.Name }}')">Update</button></td>
+      </tr>
+      {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
